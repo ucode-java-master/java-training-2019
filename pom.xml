@@ -13,5 +13,27 @@
         <module>Problems</module>
     </modules>
 
+    <properties>
+        <!-- Java -->
+        <java.version>11</java.version>
+
+        <!-- Maven -->
+        <mvn.compiler.version>3.8.0</mvn.compiler.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${mvn.compiler.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <release>${java.version}</release>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
