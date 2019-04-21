@@ -33,9 +33,9 @@ public class WomenCondition {
      */
     public void isComplexCondition() {
         int age = 0;
-        int weight = 0;
-        int height = 0;
-        int bodyMassIndex = 0;
+        int weight = 83;
+        double height = 1.89;
+        double bodyMassIndex = weight / (height * height);
         boolean isWhite = true;
 
     }
