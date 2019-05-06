@@ -1,14 +1,13 @@
 package ucode.curs5.shapes;
 
-public class Rectangle extends Shape {
+public class Rectangle extends DrawableShape {
 
     public Rectangle(String shapeName) {
         super(shapeName);
     }
 
     @Override
-    public void drawShape() {
-        System.out.println("  Drawing the shape: " + shapeName);
+    public void printShape() {
         System.out.println("            _________________________          ");
         System.out.println("           |                         |         ");
         System.out.println("           |                         |         ");

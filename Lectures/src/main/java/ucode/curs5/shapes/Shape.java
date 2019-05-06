@@ -8,17 +8,7 @@ public class Shape {
         this.shapeName = shapeName;
     }
 
-    public void drawShape() {
+    public void printName() {
         System.out.println("  Drawing the shape: " + shapeName);
-        System.out.println("              _________________                ");
-        System.out.println("             /                 \\              ");
-        System.out.println("            /                   \\             ");
-        System.out.println("           |                     |             ");
-        System.out.println("           |                     |             ");
-        System.out.println("           |                     |             ");
-        System.out.println("            \\                   /             ");
-        System.out.println("             \\_________________/              ");
-        System.out.println("                                               ");
     }
-
 }
