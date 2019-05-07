@@ -19,4 +19,11 @@ public class Rectangle extends DrawableShape {
         System.out.println("                                               ");
     }
 
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "shapeName='" + shapeName + '\'' +
+                '}';
+    }
+
 }

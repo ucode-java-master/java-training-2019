@@ -1,18 +1,16 @@
 package ucode.curs5.shapes;
 
-public class DrawableShape extends Shape {
+public abstract class DrawableShape extends Shape {
 
     public DrawableShape(String shapeName) {
         super(shapeName);
     }
 
-    public void drawShape() {
+    public final void drawShape() {
         printName();
         printShape();
     }
 
-    protected void printShape(){
-        System.out.println("I am not implemented");
-    }
+    protected abstract void printShape();
 
 }
