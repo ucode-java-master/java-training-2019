@@ -2,10 +2,11 @@ package ucode.curs5.shapes;
 
 public class Main {
     public static void main(String[] args) {
-        Shape anOrdinaryShape = new Shape("shape");
+        Shape anOrdinaryShape = new Square("shape");
+        anOrdinaryShape = new Rectangle("a");
 //        anOrdinaryShape.drawShape();
 
-        DrawableShape mightBeARectangle = new Rectangle("rectangle");
+        DrawableShape mightBeARectangle = getShape("rectangle");
         mightBeARectangle.drawShape();
 
 //        Shape alsoMightBeARectangle = new Shape("shape 2");
@@ -16,6 +17,15 @@ public class Main {
 
         DrawableShape butThisIAmNotSureItsASquare = new Rectangle("rectangle 2");
         butThisIAmNotSureItsASquare.drawShape();
+
+        ShapeFactory factory = new ShapeFactory();
+        Shape aShape = factory.getShape("a");
+
+        aShape.printName();
+    }
+
+    private static Rectangle getShape(String rectangle) {
+        return new Rectangle(rectangle);
     }
 
 }

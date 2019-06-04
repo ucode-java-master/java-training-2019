@@ -3,7 +3,8 @@ package ucode.curs4;
 public class DogMain {
 
     public static void main(String[] args) {
-        Dog dog = new Dog(30, "blue", 5);
+        final Dog dog = new Dog(30, "blue", 5);
+        final Dog dog2 = new Dog(40, "green", 10);
 
         System.out.println("We adopted a new dog, of color " + dog.getDogColor());
         System.out.println("let's feed the dog");

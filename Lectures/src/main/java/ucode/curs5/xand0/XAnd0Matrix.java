@@ -2,19 +2,25 @@ package ucode.curs5.xand0;
 
 public class XAnd0Matrix {
 
+    private static final String EMPTY_SPACE = " ";
+
     private String[][] matrix;
 
     XAnd0Matrix() {
         matrix = new String[3][3];
         for (int lineIterator = 0; lineIterator < 3; lineIterator++) {
             for (int columnIterator = 0; columnIterator < 3; columnIterator++) {
-                matrix[lineIterator][columnIterator] = " ";
+                matrix[lineIterator][columnIterator] = EMPTY_SPACE;
             }
         }
     }
 
-    public void makeMove(int line, int column, String element) {
-        matrix[line][column] = element;
+    public boolean makeMove(int line, int column, String element) {
+        if (matrix[line][column].equals(EMPTY_SPACE)) {
+            matrix[line][column] = element;
+            return true;
+        }
+        return false;
     }
 
     public boolean isGameWon(String element) {

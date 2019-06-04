@@ -14,6 +14,10 @@ public class Dog {
         this.isHungry = false;
     }
 
+    public Dog() {
+        this(0, null, 0);
+    }
+
     public void feed(int amountOfFood) {
         if (amountOfFood > 5) {
             System.out.println("Dog cannot eat that much");

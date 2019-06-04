@@ -26,4 +26,8 @@ public class Rectangle extends DrawableShape {
                 '}';
     }
 
+    public void iamarectangle() {
+
+    }
+
 }

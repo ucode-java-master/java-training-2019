@@ -10,7 +10,6 @@ public class MainXAnd0 {
         Scanner scanner = new Scanner(System.in);
         matrix.printMatrix();
 
-        boolean isXPlaying = true;
 
         while (true) {
 
@@ -24,9 +23,11 @@ public class MainXAnd0 {
             scanner.nextLine();
             String element = scanner.nextLine();
 
-            isXPlaying = !isXPlaying;
             if (element.equals("X") || element.equals("0")) {
-                matrix.makeMove(line, column, element);
+                boolean result = matrix.makeMove(line, column, element);
+                if (!result) {
+                    System.out.println("!!!!!!!!!!!!!! Illegal move !!!!!!!!!!!!!!");
+                }
                 matrix.printMatrix();
             }
 
