@@ -77,4 +77,10 @@ public class Dog {
         }
     }
 
+    enum Color {
+        BLUE,
+        GREEN,
+        RED;
+    }
+
 }
