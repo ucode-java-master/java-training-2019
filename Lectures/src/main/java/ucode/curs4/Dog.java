@@ -1,6 +1,8 @@
 package ucode.curs4;
 
-public class Dog {
+import java.util.Objects;
+
+public class Dog implements Comparable<Dog> {
 
     private int weight;
     private String color;
@@ -14,8 +16,16 @@ public class Dog {
         this.isHungry = false;
     }
 
+    public String getColor() {
+        return color;
+    }
+
     public Dog() {
         this(0, null, 0);
+    }
+
+    public int getWeight() {
+        return weight;
     }
 
     public void feed(int amountOfFood) {
@@ -77,10 +87,59 @@ public class Dog {
         }
     }
 
+    @Override
+    public int compareTo(Dog o) {
+        if (weight > o.getWeight()) {
+            return 1;
+        } else if (weight < o.getWeight()) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
+
+//    @Override
+//    public int compareTo(Dog o) {
+//        return new DogComparator().compare(this, o);
+//    }
+
+    @Override
+    public boolean equals(Object o) {
+
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        Dog dog = (Dog) o;
+
+        return weight == dog.weight &&
+                happiness == dog.happiness &&
+                isHungry == dog.isHungry &&
+                color.equals(dog.color);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(weight, color, happiness, isHungry);
+    }
+
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "weight=" + weight +
+                ", color='" + color + '\'' +
+                "}\n";
+    }
+
     enum Color {
         BLUE,
         GREEN,
-        RED;
+        RED
     }
+
 
 }

@@ -49,7 +49,8 @@ public class ListExamples {
 
         Iterator<String> iterator = classroom.iterator();
         while (iterator.hasNext()) {
-            System.out.println("This is a student: " + iterator.next());
+            String next = iterator.next();
+            System.out.println("This is a student: " + next);
         }
 
     }
