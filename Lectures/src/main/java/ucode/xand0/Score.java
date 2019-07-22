@@ -6,6 +6,10 @@ public class Score {
     private int oNumberOfWinnings;
 
     public void updateScore(MatrixElement whoWon) {
+        if (whoWon.equals(MatrixElement.E)) {
+            throw new IllegalArgumentException("cannot update score for player E");
+        }
+
         if (whoWon == MatrixElement.O) {
             oNumberOfWinnings++;
         } else {

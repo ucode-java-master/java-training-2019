@@ -8,13 +8,14 @@ public class XAnd0Matrix {
         matrix = new MatrixElement[3][3];
         for (int lineIterator = 0; lineIterator < 3; lineIterator++) {
             for (int columnIterator = 0; columnIterator < 3; columnIterator++) {
-                matrix[lineIterator][columnIterator] = MatrixElement.EMPTY;
+                matrix[lineIterator][columnIterator] = MatrixElement.E;
             }
         }
     }
 
+
     public boolean makeMove(PlayerMove move, MatrixElement element) {
-        if (matrix[move.getLine()][move.getColumn()].equals(MatrixElement.EMPTY)) {
+        if (matrix[move.getLine()][move.getColumn()].equals(MatrixElement.E)) {
             matrix[move.getLine()][move.getColumn()] = element;
             return true;
         }
@@ -37,7 +38,7 @@ public class XAnd0Matrix {
     private boolean isMatrixFull() {
         for (int lineIterator = 0; lineIterator < 3; lineIterator++) {
             for (int columnIterator = 0; columnIterator < 3; columnIterator++) {
-                if (matrix[lineIterator][columnIterator] == MatrixElement.EMPTY) {
+                if (matrix[lineIterator][columnIterator] == MatrixElement.E) {
                     return false;
                 }
             }

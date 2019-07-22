@@ -31,13 +31,18 @@ public class WomenCondition {
      * Print, when a woman has the following characteristics, that she is caucasian healty; Age higher than 25 but smaller than 40, weight higher than 46,
      * height over 145, body mass index (weight / height * height) is under 30, and skin color is white.
      */
-    public void isComplexCondition() {
-        int age = 0;
-        int weight = 83;
+    public boolean isComplexCondition() {
+
+        int age = 31;
+        int weight = 45;
         double height = 1.89;
         double bodyMassIndex = weight / (height * height);
+        System.out.println(bodyMassIndex);
         boolean isWhite = true;
 
+        return age > 25 && age < 40
+                && weight < 46 && height > 1.45
+                && bodyMassIndex < 30 && isWhite;
     }
 
     /**

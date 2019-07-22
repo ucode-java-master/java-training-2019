@@ -25,7 +25,7 @@ class XAnd0MatrixTest {
         matrix.makeMove(move, theElementToSet);
 
         // THEN
-        assertEquals(matrix.getMatrix()[1][1], theElementToSet);
+        assertEquals(theElementToSet, matrix.getMatrix()[1][1]);
     }
 
     @Test

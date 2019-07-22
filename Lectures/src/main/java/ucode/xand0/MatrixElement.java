@@ -3,7 +3,7 @@ package ucode.xand0;
 public enum MatrixElement {
     X("X"),
     O("0"),
-    EMPTY(" ");
+    E(" ");
 
     private final String representation;
 
