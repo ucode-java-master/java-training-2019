@@ -6,8 +6,8 @@ public class FacebookInternetConnection extends InternetConnection {
 
 
     @Override
-    protected String getActuallMessage(Dog mesaj) {
-        return mesaj.toString();
+    protected String getActualMessage(Dog dog) {
+        return dog.toString();
     }
 
     public void playSound() {

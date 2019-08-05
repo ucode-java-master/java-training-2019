@@ -38,5 +38,11 @@ public class ShoppingItem {
         this.checked = checked;
     }
 
+    public static ShoppingItem buildShoppingItem(String name, int quantity) {
+        ShoppingItem item = new ShoppingItem();
+        item.setQuantity(quantity);
+        item.setName(name);
+        return item;
+    }
 
 }

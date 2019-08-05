@@ -4,13 +4,19 @@ import ucode.curs4.Dog;
 
 public class Main {
     public static void main(String[] args) {
-//        FacebookInternetConnection connection = new FacebookInternetConnection();
+        InternetConnection connection = new FacebookInternetConnection();
+        connection.connect();
+        connection.sendMessage(new Dog());
+        connection.disconnect();
+
+
+//        InternetConnection connection = new GmailInternetConnection();
 //        connection.connect();
 //        connection.sendMessage(new Dog());
 //        connection.disconnect();
 
         sendAMessageToMyWebsite(new Dog());
-        FacebookInternetConnection connection = (FacebookInternetConnection) getInternetConnection("facebookInternetConnection");
+//        FacebookInternetConnection connection = (FacebookInternetConnection) getInternetConnection("facebookInternetConnection");
 
 
     }

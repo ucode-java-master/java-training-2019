@@ -1,6 +1,7 @@
 package ucode.shoppinglist;
 
 import java.io.InputStream;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class InputReader {
@@ -12,20 +13,23 @@ public class InputReader {
     }
 
     public int readOption() {
-        int optionRead = scanner.nextInt();
-        return optionRead;
+        return readInt();
     }
 
-    public ShoppingItem readShoppingItem() {
-        System.out.println("INTRODUCETI NUME");
+    public int readInt() {
+        while (true) {
+            try {
+                return scanner.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println(" try again");
+                scanner.nextLine();
+            }
+        }
+    }
+
+    public String readString() {
         scanner.nextLine();
-        String name = scanner.nextLine();
-        System.out.println("INTRODUCETI CANTITATEA");
-        int quantity = scanner.nextInt();
-        ShoppingItem a = new ShoppingItem();
-        a.setName(name);
-        a.setQuantity(quantity);
-        return a;
+        return scanner.nextLine();
     }
 
 }

@@ -10,13 +10,15 @@ public abstract class InternetConnection {
     protected Socket socket;
     private String URL;
 
-    public void connect() {
+    public final void connect() {
         // connect to URL;
 //        socket.connect();
 //
     }
 
-    public void disconnect() {
+    public final void disconnect() {
+
+
         try {
             socket.close();
         } catch (IOException e) {
@@ -24,15 +26,15 @@ public abstract class InternetConnection {
         }
     }
 
-    public void sendMessage(Dog mesaj) {
+    public final void sendMessage(Dog mesaj) {
 //        try {
-//            socket.getOutputStream().write(getActuallMessage(mesaj));
+//            socket.getOutputStream().write(getActualMessage(mesaj));
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
     }
 
-    protected abstract String getActuallMessage(Dog mesaj);
+    protected abstract String getActualMessage(Dog mesaj);
 
 
 }
